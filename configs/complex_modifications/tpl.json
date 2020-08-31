@@ -1,0 +1,46 @@
+{
+	"title": "template (left - VM/Remote)",
+	"rules": [{
+		"description": "[Ctrl (left)] => [Cmd (left)] for RDP, Citrix Viewer, Parallels",
+		"manipulators": [
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "left_control",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "left_command"
+				}],
+				"conditions": [{
+						"type": "frontmost_application_unless",
+						"bundle_identifiers": [
+							"com.microsoft.rdc.macos",
+							"com.citrix.XenAppViewer",
+							"com\\.parallels\\."
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+            }
+        ]
+    }]
+}
