@@ -1,0 +1,234 @@
+{
+	"title": "Swap ctrl-cmd (VM/Remote)",
+	"rules": [{
+		"description": "RDP & Citrix WS - Swap command and control - v2",
+		"manipulators": [
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "left_control",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "left_command"
+				}],
+				"conditions": [{
+						"type": "frontmost_application_unless",
+						"bundle_identifiers": [
+							"com.microsoft.rdc.macos",
+							"com.citrix.XenAppViewer",
+							"com\\.parallels\\."
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "left_command",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "left_control"
+				}],
+				"conditions": [{
+						"type": "frontmost_application_unless",
+						"bundle_identifiers": [
+							"com.microsoft.rdc.macos",
+							"com.citrix.XenAppViewer",
+							"com\\.parallels\\."
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "left_option",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "left_command"
+				}],
+				"conditions": [{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.citrix.XenAppViewer"
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "right_control",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "right_command"
+				}],
+				"conditions": [{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.microsoft.rdc.macos",
+							"com.citrix.XenAppViewer",
+							"com\\.parallels\\."
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+
+			},
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "right_command",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "right_control"
+				}],
+				"conditions": [{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.microsoft.rdc.macos",
+							"com\\.parallels\\."
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "basic",
+				"from": {
+					"key_code": "left_command",
+					"modifiers": {
+						"optional": [
+							"any"
+						]
+					}
+				},
+				"to": [{
+					"key_code": "right_command"
+				}],
+				"conditions": [
+					{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.citrix.XenAppViewer"
+						]
+					},
+					{
+						"type": "device_if",
+						"identifiers": [
+							{
+								"vendor_id": 9610,
+								"product_id": 4102,
+								"description": "RedDragon USB Keyboard"
+							},
+							{
+								"vendor_id": 1118,
+								"product_id": 2327,
+								"description": "Microsoft Surface"
+							}
+						]
+					}
+				]
+			}
+
+		]
+	}]
+}
