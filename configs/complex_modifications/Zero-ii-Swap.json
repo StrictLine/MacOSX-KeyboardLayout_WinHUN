@@ -1,7 +1,7 @@
 {
 	"title": "Swap 0 and í/Í",
 	"rules": [{
-		"description": "Swap 0 and í/Í on the original Mac keyboard (RDP-only)",
+		"description": "Swap 0 and í/Í on the original Mac keyboard (RDP/Parallels)",
 		"manipulators": [
 			{
 				"type": "basic",
@@ -19,7 +19,8 @@
 				"conditions": [{
 						"type": "frontmost_application_if",
 						"bundle_identifiers": [
-							"com.microsoft.rdc.macos"
+							"com.microsoft.rdc.macos",
+							"com.parallels"
 						]
 					},
 					{
@@ -50,7 +51,8 @@
 				"conditions": [{
 						"type": "frontmost_application_if",
 						"bundle_identifiers": [
-							"com.microsoft.rdc.macos"
+							"com.microsoft.rdc.macos",
+							"com.parallels"
 						]
 					},
 					{
