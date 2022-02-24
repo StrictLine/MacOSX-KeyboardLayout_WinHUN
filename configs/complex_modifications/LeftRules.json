@@ -20,7 +20,6 @@
 					"conditions": [{
 							"type": "frontmost_application_if",
 							"bundle_identifiers": [
-								"com.citrix.XenAppViewer"
 								"com.citrix.XenAppViewer",
 								"com.citrix.receiver.icaviewer.mac"
 							]
@@ -68,7 +67,6 @@
 					"conditions": [{
 							"type": "frontmost_application_if",
 							"bundle_identifiers": [
-								"com.citrix.XenAppViewer"
 								"com.citrix.XenAppViewer",
 								"com.citrix.receiver.icaviewer.mac"
 							]
@@ -96,7 +94,53 @@
 					]
 				}
         	]
-		},		
+		},	
+		{
+			"description": "Safari back (mouse) button (experimental)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"pointing_button": "button4"
+					},
+					"to": [{
+						"key_code": "left_arrow",
+						"modifiers": [
+							"left_control"
+						]
+					}],
+					"conditions": [{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.apple.Safari"
+						]
+					}]
+				}
+			]
+		},	
+		{
+			"description": "Safari fwd (mouse) button (experimental)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"pointing_button": "button5"
+					},
+					"to": [{
+						"key_code": "right_arrow",
+						"modifiers": [
+							"left_control"
+						]
+					}],
+					"conditions": [{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.apple.Safari"
+						]
+					}]
+				}
+			]
+		},
 		{
 			"description": "[Ctrl (left)] => [Cmd (left)] except for RDP, Parallels, Citrix",
 			"manipulators": [
@@ -118,7 +162,6 @@
 							"bundle_identifiers": [
 								"com.microsoft.rdc.macos",
 								"com\\.parallels\\.",
-								"com.citrix.XenAppViewer"								
 								"com.citrix.XenAppViewer",								
 								"com.citrix.receiver.icaviewer.mac"								
 							]
@@ -168,7 +211,6 @@
 							"bundle_identifiers": [
 								"com.microsoft.rdc.macos",
 								"com\\.parallels\\.",
-								"com.citrix.XenAppViewer"
 								"com.citrix.XenAppViewer",
 								"com.citrix.receiver.icaviewer.mac"
 							]
