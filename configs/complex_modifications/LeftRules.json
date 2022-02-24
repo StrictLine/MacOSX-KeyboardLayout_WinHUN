@@ -142,7 +142,7 @@
 			]
 		},
 		{
-			"description": "[Ctrl (left)] => [Cmd (left)] except for RDP, Parallels, Citrix",
+			"description": "[Ctrl (left)] => [Cmd (left)] except for RDP, Parallels, Citrix, Rider/Jetbrains",
 			"manipulators": [
 				{
 					"type": "basic",
@@ -163,7 +163,8 @@
 								"com.microsoft.rdc.macos",
 								"com\\.parallels\\.",
 								"com.citrix.XenAppViewer",								
-								"com.citrix.receiver.icaviewer.mac"								
+								"com.citrix.receiver.icaviewer.mac",
+								"com.jetbrains.rider"
 							]
 						},
 						{
@@ -191,7 +192,7 @@
 			]
 		},
 		{
-			"description": "[Cmd (left)] => [Ctrl (left)] except for RDP, Parallels,",
+			"description": "[Cmd (left)] => [Ctrl (left)] except for RDP, Parallels, Rider/Jetbrains",
 			"manipulators": [
 				{
 					"type": "basic",
@@ -212,7 +213,8 @@
 								"com.microsoft.rdc.macos",
 								"com\\.parallels\\.",
 								"com.citrix.XenAppViewer",
-								"com.citrix.receiver.icaviewer.mac"
+								"com.citrix.receiver.icaviewer.mac",
+								"com.jetbrains.rider"
 							]
 						},
 						{
@@ -238,6 +240,34 @@
 					]
 				}
 			]
-		}				
+		},
+		{
+			"description": "Cmd + , (Prefs) for exceptions (like Rider)",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "comma",
+						"modifiers": {
+							"mandatory": [
+								"left_control"
+							]
+						}
+					},
+					"to": {
+						"key_code": "comma",
+						"modifiers": [
+							"left_command"
+						]
+					},
+					"conditions": [{
+						"type": "frontmost_application_if",
+						"bundle_identifiers": [
+							"com.jetbrains.rider"
+						]
+					}]
+				}
+			]
+		}
 	]
 }
