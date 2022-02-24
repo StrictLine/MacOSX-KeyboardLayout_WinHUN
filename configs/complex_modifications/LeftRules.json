@@ -129,7 +129,7 @@
 					"to": [{
 						"key_code": "right_arrow",
 						"modifiers": [
-							"left_control"
+							"left_command"
 						]
 					}],
 					"conditions": [{
