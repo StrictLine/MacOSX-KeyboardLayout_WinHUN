@@ -21,7 +21,9 @@
 						"bundle_identifiers": [
 							"com.microsoft.rdc.macos",
 							"com.citrix.XenAppViewer",
-							"com\\.parallels\\."
+							"com.citrix.receiver.icaviewer.mac",
+							"com\\.parallels\\.",
+							"com.jetbrains.rider"
 						]
 					},
 					{
@@ -36,6 +38,11 @@
 								"vendor_id": 1118,
 								"product_id": 2327,
 								"description": "Microsoft Surface"
+							},
+							{
+								"vendor_id": 6940,
+								"product_id": 6985,
+								"description": "CORSAIR K70"
 							}
 						]
 					}
@@ -95,7 +102,8 @@
 				"conditions": [{
 						"type": "frontmost_application_if",
 						"bundle_identifiers": [
-							"com.citrix.XenAppViewer"
+							"com.citrix.XenAppViewer",
+							"com.citrix.receiver.icaviewer.mac"
 						]
 					},
 					{
@@ -110,6 +118,11 @@
 								"vendor_id": 1118,
 								"product_id": 2327,
 								"description": "Microsoft Surface"
+							},
+							{
+								"vendor_id": 6940,
+								"product_id": 6985,
+								"description": "CORSAIR K70"
 							}
 						]
 					}
@@ -133,6 +146,7 @@
 						"bundle_identifiers": [
 							"com.microsoft.rdc.macos",
 							"com.citrix.XenAppViewer",
+							"com.citrix.receiver.icaviewer.mac",
 							"com\\.parallels\\."
 						]
 					},
@@ -148,6 +162,11 @@
 								"vendor_id": 1118,
 								"product_id": 2327,
 								"description": "Microsoft Surface"
+							},
+							{
+								"vendor_id": 6940,
+								"product_id": 6985,
+								"description": "CORSAIR K70"
 							}
 						]
 					}
@@ -171,6 +190,7 @@
 						"type": "frontmost_application_if",
 						"bundle_identifiers": [
 							"com.microsoft.rdc.macos",
+							"com.citrix.receiver.icaviewer.mac",
 							"com\\.parallels\\."
 						]
 					},
@@ -186,6 +206,11 @@
 								"vendor_id": 1118,
 								"product_id": 2327,
 								"description": "Microsoft Surface"
+							},
+							{
+								"vendor_id": 6940,
+								"product_id": 6985,
+								"description": "CORSAIR K70"
 							}
 						]
 					}
@@ -208,7 +233,8 @@
 					{
 						"type": "frontmost_application_if",
 						"bundle_identifiers": [
-							"com.citrix.XenAppViewer"
+							"com.citrix.XenAppViewer",
+							"com.citrix.receiver.icaviewer.mac"
 						]
 					},
 					{
@@ -223,6 +249,11 @@
 								"vendor_id": 1118,
 								"product_id": 2327,
 								"description": "Microsoft Surface"
+							},
+							{
+								"vendor_id": 6940,
+								"product_id": 6985,
+								"description": "CORSAIR K70"
 							}
 						]
 					}
