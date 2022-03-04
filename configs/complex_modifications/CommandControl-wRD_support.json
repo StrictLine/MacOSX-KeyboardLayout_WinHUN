@@ -144,9 +144,7 @@
 				"conditions": [{
 						"type": "frontmost_application_if",
 						"bundle_identifiers": [
-							"com.microsoft.rdc.macos",
-							"com.citrix.XenAppViewer",
-							"com.citrix.receiver.icaviewer.mac"
+							"com.microsoft.rdc.macos"
 						]
 					},
 					{
