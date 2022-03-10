@@ -47,53 +47,6 @@
 					]
 				}
         	]
-		},
-		{
-			"description": "[Option (left)] => [Command (left)] for Citrix Viewer (only)",
-			"manipulators": [
-				{
-					"type": "basic",
-					"from": {
-						"key_code": "left_option",
-						"modifiers": {
-							"optional": [
-								"any"
-							]
-						}
-					},
-					"to": [{
-						"key_code": "left_command"
-					}],
-					"conditions": [{
-							"type": "frontmost_application_if",
-							"bundle_identifiers": [
-								"com.citrix.XenAppViewer",
-								"com.citrix.receiver.icaviewer.mac"
-							]
-						},
-						{
-							"type": "device_if",
-							"identifiers": [
-								{
-									"vendor_id": 9610,
-									"product_id": 4102,
-									"description": "RedDragon USB Keyboard"
-								},
-								{
-									"vendor_id": 1118,
-									"product_id": 2327,
-									"description": "Microsoft Surface"
-								},
-								{
-									"vendor_id": 6940,
-									"product_id": 6985,
-									"description": "CORSAIR K70"
-								}
-							]
-						}
-					]
-				}
-        	]
 		},	
 		{
 			"description": "Safari back (mouse) button (experimental)",
