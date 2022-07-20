@@ -51,6 +51,51 @@
 			]
 		},
 		{
+			"description": "[Ctrl (right)] => [Cmd (right)]",
+			"manipulators": [
+				{
+					"type": "basic",
+					"from": {
+						"key_code": "right_control",
+						"modifiers": {
+							"optional": [
+								"any"
+							]
+						}
+					},
+					"to": [{
+						"key_code": "right_command"
+					}],
+					"conditions": [{
+							"type": "frontmost_application_unless",
+							"bundle_identifiers": [
+							]
+						},
+						{
+							"type": "device_if",
+							"identifiers": [
+								{
+									"vendor_id": 9610,
+									"product_id": 4102,
+									"description": "RedDragon USB Keyboard"
+								},
+								{
+									"vendor_id": 1118,
+									"product_id": 2327,
+									"description": "Microsoft Surface"
+								},
+								{
+									"vendor_id": 6940,
+									"product_id": 6985,
+									"description": "CORSAIR K70"
+								}
+							]
+						}
+					]
+				}				
+			]
+		},
+		{
 			"description": "Repairing [Cmd (right)] functionality except for Remotes/VM",
 			"manipulators": [
 				{
