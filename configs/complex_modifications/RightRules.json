@@ -51,7 +51,7 @@
 			]
 		},
 		{
-			"description": "[Ctrl (right)] => [Cmd (right)]",
+			"description": "[Ctrl (right)] => [Cmd (right)] except for RDP, Parallels, Citrix",
 			"manipulators": [
 				{
 					"type": "basic",
@@ -69,6 +69,10 @@
 					"conditions": [{
 							"type": "frontmost_application_unless",
 							"bundle_identifiers": [
+								"com.citrix.XenAppViewer",
+								"com.citrix.receiver.icaviewer.mac",
+								"com\\.parallels\\.",
+								"com.microsoft.rdc.macos"							
 							]
 						},
 						{
