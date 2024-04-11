@@ -1,7 +1,7 @@
 {
 	"title": "Swap ctrl-cmd (VM/Remote)",
 	"rules": [{
-		"description": "RDP, Citrix WS, Parallels, Jetbrains - Swap command and control - v2",
+		"description": "RDP, Citrix WS, Parallels, Jetbrains - Swap command and control - v3",
 		"manipulators": [
 			{
 				"type": "basic",
@@ -85,48 +85,6 @@
 						]
 					}
 				]
-			},
-			{
-				"type": "basic",
-				"from": {
-					"key_code": "right_control",
-					"modifiers": {
-						"optional": [
-							"any"
-						]
-					}
-				},
-				"to": [{
-					"key_code": "right_command"
-				}],
-				"conditions": [{
-						"type": "frontmost_application_if",
-						"bundle_identifiers": [
-							"com.microsoft.rdc.macos"
-						]
-					},
-					{
-						"type": "device_if",
-						"identifiers": [
-							{
-								"vendor_id": 9610,
-								"product_id": 4102,
-								"description": "RedDragon USB Keyboard"
-							},
-							{
-								"vendor_id": 1118,
-								"product_id": 2327,
-								"description": "Microsoft Surface"
-							},
-							{
-								"vendor_id": 6940,
-								"product_id": 6985,
-								"description": "CORSAIR K70"
-							}
-						]
-					}
-				]
-
 			},
 			{
 				"type": "basic",
