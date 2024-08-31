@@ -189,102 +189,90 @@
 			]
 		},
 		{
-			"description": "[Ctrl (left)] => [Cmd (left)] except for RDP, Parallels, Citrix, Rider/Jetbrains",
+			"description": "[Ctrl (left)] => [Cmd (left)] except for RDP, Parallels, Citrix",
 			"manipulators": [
-				{
-					"type": "basic",
-					"from": {
-						"key_code": "left_control",
-						"modifiers": {
-							"optional": [
-								"any"
-							]
-						}
-					},
-					"to": [{
-						"key_code": "left_command"
-					}],
-					"conditions": [{
-							"type": "frontmost_application_unless",
-							"bundle_identifiers": [
-								"com.microsoft.rdc.macos",
-								"com\\.parallels\\.",
-								"com.citrix.XenAppViewer",								
-								"com.citrix.receiver.icaviewer.mac",
-								"com.jetbrains.rider"
-							]
-						},
-						{
-							"type": "device_if",
-							"identifiers": [
-								{
-									"vendor_id": 9610,
-									"product_id": 4102,
-									"description": "RedDragon USB Keyboard"
-								},
-								{
-									"vendor_id": 1118,
-									"product_id": 2327,
-									"description": "Microsoft Surface"
-								},
-								{
-									"vendor_id": 6940,
-									"product_id": 6985,
-									"description": "CORSAIR K70"
-								}
-							]
-						}
-					]
-				}
+				 {
+					  "conditions": [
+							{
+								 "bundle_identifiers": [
+									  "com.microsoft.rdc.macos",
+									  "com\\.parallels\\.",
+									  "com.citrix.XenAppViewer",
+									  "com.citrix.receiver.icaviewer.mac"
+								 ],
+								 "type": "frontmost_application_unless"
+							},
+							{
+								 "identifiers": [
+									  {
+											"description": "RedDragon USB Keyboard",
+											"product_id": 4102,
+											"vendor_id": 9610
+									  },
+									  {
+											"description": "Microsoft Surface",
+											"product_id": 2327,
+											"vendor_id": 1118
+									  },
+									  {
+											"description": "CORSAIR K70",
+											"product_id": 6985,
+											"vendor_id": 6940
+									  }
+								 ],
+								 "type": "device_if"
+							}
+					  ],
+					  "from": {
+							"key_code": "left_control",
+							"modifiers": { "optional": ["any"] }
+					  },
+					  "to": [{ "key_code": "left_command" }],
+					  "type": "basic"
+				 }
 			]
-		},
+	  },
 		{
-			"description": "[Cmd (left)] => [Ctrl (left)] except for RDP, Parallels, Rider/Jetbrains",
+			"description": "[Cmd (left)] => [Ctrl (left)] except for RDP, Parallels",
 			"manipulators": [
-				{
-					"type": "basic",
-					"from": {
-						"key_code": "left_command",
-						"modifiers": {
-							"optional": [
-								"any"
-							]
-						}
-					},
-					"to": [{
-						"key_code": "left_control"
-					}],
-					"conditions": [{
-							"type": "frontmost_application_unless",
-							"bundle_identifiers": [
-								"com.microsoft.rdc.macos",
-								"com\\.parallels\\.",
-								"com.jetbrains.rider"
-							]
-						},
-						{
-							"type": "device_if",
-							"identifiers": [
-								{
-									"vendor_id": 9610,
-									"product_id": 4102,
-									"description": "RedDragon USB Keyboard"
-								},
-								{
-									"vendor_id": 1118,
-									"product_id": 2327,
-									"description": "Microsoft Surface"
-								},
-								{
-									"vendor_id": 6940,
-									"product_id": 6985,
-									"description": "CORSAIR K70"
-								}
-							]
-						}
-					]
-				}
+				 {
+					  "conditions": [
+							{
+								 "bundle_identifiers": [
+									  "com.microsoft.rdc.macos",
+									  "com\\.parallels\\."
+								 ],
+								 "type": "frontmost_application_unless"
+							},
+							{
+								 "identifiers": [
+									  {
+											"description": "RedDragon USB Keyboard",
+											"product_id": 4102,
+											"vendor_id": 9610
+									  },
+									  {
+											"description": "Microsoft Surface",
+											"product_id": 2327,
+											"vendor_id": 1118
+									  },
+									  {
+											"description": "CORSAIR K70",
+											"product_id": 6985,
+											"vendor_id": 6940
+									  }
+								 ],
+								 "type": "device_if"
+							}
+					  ],
+					  "from": {
+							"key_code": "left_command",
+							"modifiers": { "optional": ["any"] }
+					  },
+					  "to": [{ "key_code": "left_control" }],
+					  "type": "basic"
+				 }
 			]
-		}
+	  }
 	]
 }
