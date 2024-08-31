@@ -147,34 +147,6 @@
 					]
 				}				
 			]
-		},
-		{
-			"description": "Cmd + , (Prefs) for exceptions (like Rider)",
-			"manipulators": [
-				{
-					"type": "basic",
-					"from": {
-						"key_code": "comma",
-						"modifiers": {
-							"mandatory": [
-								"left_control"
-							]
-						}
-					},
-					"to": {
-						"key_code": "comma",
-						"modifiers": [
-							"left_command"
-						]
-					},
-					"conditions": [{
-						"type": "frontmost_application_if",
-						"bundle_identifiers": [
-							"com.jetbrains.rider"
-						]
-					}]
-				}
-			]
 		}
 
 	]
